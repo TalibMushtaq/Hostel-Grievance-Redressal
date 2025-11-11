@@ -11,7 +11,7 @@ const {
 const { authorizeWarden } = require("../middleware/auth");
 
 complaintRoutes.post("/complaints", postComplaints);
-complaintRoutes.get("/complaints", authorizeWarden, getAllComplaintsByUser);
+complaintRoutes.get("/complaints", getAllComplaintsByUser);
 // complaintRoutes.get("/complaints", getAllComplaintsByUser);
 complaintRoutes.post("/complaints/:id", putComplaintsByid);
 complaintRoutes.delete("/complaints/:id", deleteComplaints);
